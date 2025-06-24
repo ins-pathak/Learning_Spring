@@ -10,7 +10,7 @@ public class AppGamingBasicJava {
         // var game = new MarioGame();
         // var game = new superContra();
         var game = new PackmanGame();
-        var gameRunner = new GameRunner(game);    // mariogame obj inside gameRunner obj
+        var gameRunner = new GameRunner(game);    // object creation and wireing dependencies
         gameRunner.run();
     }
 }
