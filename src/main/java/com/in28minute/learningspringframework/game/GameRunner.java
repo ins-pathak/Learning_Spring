@@ -1,12 +1,16 @@
 package com.in28minute.learningspringframework.game;
 
 public class GameRunner {
-    MarioGame game;
-    public GameRunner(MarioGame game){
+    GamingConsole game;     //reference variable of MarioGame
+    public GameRunner(GamingConsole game){ // constructur 
         this.game = game;
     }
     public void run() {
         System.out.println("mario game is running ! ");
+        game.up();
+        game.down();
+        game.left();
+        game.right();
     }
     
 }
