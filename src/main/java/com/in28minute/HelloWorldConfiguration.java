@@ -21,7 +21,7 @@ public class HelloWorldConfiguration {
     public Person person(){
         return new Person("Rishabh pathak", 23);
     }
-    @Bean
+    @Bean("address2")         // can have custom name for the Bean
     public Address address(){
         return new Address("avas vikas", "chandausi");
     }
