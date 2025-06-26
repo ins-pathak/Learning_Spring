@@ -16,9 +16,13 @@ public class App02HelloWorld {
     System.out.println(context.getBean("age"));
     System.out.println(context.getBean("person"));
     System.out.println(context.getBean("address2"));
-    // also called with type of the Bean(class) 
-    System.out.println(context.getBean(Address.class)); // alternative to call 
     
+    System.out.println(context.getBean("person2MethodCall")); // Bean creation by existing method
+    System.out.println(context.getBean("person3Parameters")); // Bean creation by existing parameters
+
+    // also called with type of the Bean(class) 
+    // give error if we have more than 1 bean of similar type bcz we are using type 
+    // System.out.println(context.getBean(Address.class)); // alternative to call 
     context.close();
     }
 }
