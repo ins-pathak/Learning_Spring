@@ -24,7 +24,11 @@ public class App02HelloWorld {
 
     // also called with type of the Bean(class) 
     // give error if we have more than 1 bean of similar type bcz we are using type 
-    // System.out.println(context.getBean(Address.class)); // alternative to call 
+
+    System.out.println(context.getBean(Person.class));
+    System.out.println(context.getBean(Address.class)); // alternative to call 
+
+    System.out.println(context.getBean("person5Qualifier"));
 
     // printing list of all beans with name
     Arrays.stream(context.getBeanDefinitionNames()) // bcz  .getBeanDefinitionName give String array
