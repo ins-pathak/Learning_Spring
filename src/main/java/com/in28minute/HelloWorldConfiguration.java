@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // record class(data carried final classes) 
-// auto generate constructor/ hashcode()/ tostring metod/and getter methods
+// auto genqerate constructor/ hashcode()/ tostring metod/and getter methods
 record Person(String name , int age,Address address){};
 record Address(String firstline, String city){};
 @Configuration         // all the spring beans are defined and maganed here 
@@ -38,6 +38,6 @@ public class HelloWorldConfiguration {
     }
     @Bean(name= "address3")         
     public Address address3(){
-        return new Address("los angleis", "America");
+        return new Address("los Angeles", "America");
     }
 }
