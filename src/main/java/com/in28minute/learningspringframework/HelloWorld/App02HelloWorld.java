@@ -1,4 +1,4 @@
-package com.in28minute;
+package com.in28minute.learningspringframework.HelloWorld;
 
 import java.util.*;
 
