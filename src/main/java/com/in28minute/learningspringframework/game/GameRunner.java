@@ -1,11 +1,12 @@
 package com.in28minute.learningspringframework.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GameRunner {
     GamingConsole game;     //reference variable of MarioGame
-    public GameRunner(GamingConsole game){ // constructur 
+    public GameRunner(@Qualifier("MarioGameQualifier") GamingConsole game){ // constructur 
         this.game = game;
     }
     public void run() {

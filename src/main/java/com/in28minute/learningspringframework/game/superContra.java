@@ -1,5 +1,8 @@
 package com.in28minute.learningspringframework.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class superContra implements GamingConsole {
     public void up(){
         System.out.println(" go up");
