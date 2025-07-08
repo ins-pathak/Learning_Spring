@@ -1,20 +1,15 @@
-package com.in28minute;
+package com.in28minute.learningspringframework.game;
 
-
-import com.in28minute.learningspringframework.game.PackmanGame;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.in28minute.learningspringframework.game.GameRunner;
-import com.in28minute.learningspringframework.game.GamingConsole;
-
-// @Configuration
+@Configuration
 @ComponentScan("package com.in28minute.learningspringframework.game")
 // this Component in pachman and  ComponentScan here will auto create and scan spring bean for us
-public class GamingAppLauncherApplication {
+public class GamingAppLauncherApplication{
     
     public static void main(String[] args) {
 
