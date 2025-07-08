@@ -17,16 +17,12 @@ class YoureBusinessClass{
               
     Dependency2 dependency2;
     
-    // this is setter method dependency injection . 
-    @Autowired          // @autowired used on sette method instead of field .
-    public void setDependency1(Dependency1 dependency1) {
-        System.out.println("setter injection - setDependency1");
+    // gives waring bcz if  having only one constructor than no need to call it 
+    // spring automatically use it for dependency injection .
+    @Autowired    // class have single constructor no need to call @autowired it will automatically use for dependency injection     
+    public YoureBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
+        super();
         this.dependency1 = dependency1;
-    }
-
-    @Autowired
-    public void setDependency2(Dependency2 dependency2) {
-        System.out.println("setter injection - setDependency2");
         this.dependency2 = dependency2;
     }
 
