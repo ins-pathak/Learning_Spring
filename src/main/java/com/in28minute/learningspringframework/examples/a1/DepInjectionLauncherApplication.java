@@ -13,13 +13,24 @@ import org.springframework.stereotype.Component;
 @Component
 class YoureBusinessClass{
 
-    @Autowired                 // @autowired on any field  -> flied injection .
     Dependency1 dependency1;
-
-    @Autowired                 
+              
     Dependency2 dependency2;
+    
+    // this is setter method dependency injection . 
+    @Autowired          // @autowired used on sette method instead of field .
+    public void setDependency1(Dependency1 dependency1) {
+        System.out.println("setter injection - setDependency1");
+        this.dependency1 = dependency1;
+    }
 
-    public String toString(){
+    @Autowired
+    public void setDependency2(Dependency2 dependency2) {
+        System.out.println("setter injection - setDependency2");
+        this.dependency2 = dependency2;
+    }
+
+    public String toString(){             // use stringbuffer instead of string
         return "using " + dependency1 + " and "+ dependency2;
     }
 }
